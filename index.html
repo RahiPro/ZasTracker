@@ -1122,7 +1122,7 @@ function playAlertSound() {
 function sendBrowserNotif(title, body, tag) {
   if (!_notifEnabled) return;
   try {
-    const n = new Notification(title, { body, tag, icon: '', badge: '' });
+    const n = new Notification(title, { body, tag, icon: './icons/icon-192x192.png', badge: './icons/icon-72x72.png' });
     setTimeout(() => n.close(), 6000);
     n.onclick = () => { window.focus(); n.close(); };
   } catch(_) {}
